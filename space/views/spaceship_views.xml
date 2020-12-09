@@ -41,7 +41,7 @@
             <field name="arch" type="xml">
                 <tree string="Spaceship List">
                     <field name="name"/>
-                    <field name="fuel"/>
+<!--                    <field name="fuel"/>-->
                     <field name="type"/>
                     <field name="passenger"/>
                 </tree>
