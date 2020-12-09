@@ -1,3 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from . import spaseship
+from . import spaceship
+from . import mission
+from . import project_task

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="mission_view_form">
+            <field name="name">space.mission.form</field>
+            <field name="model">space.mission</field>
+            <field name="arch" type="xml">
+                <form string="Mission Form">
+                    <sheet>
+                        <h1><field name="name"/></h1>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="spaceship_id"/>
+                                <field name="fuel_needed"/>
+                                <field name="engine"/>
+                                <field name="safety"/>
+                            </group>
+                            <group>
+                                <field name="launch_date"/>
+                                <field name="return_date"/>
+                                <field name="duration"/>
+                                <field name="captain"/>
+                            </group>
+                        </group> 
+                        <group>
+                            <field name="team_member_id"/>                               
+                        </group>
+                        <group>
+                            <field name="member_ids"/>                               
+                        </group>
+                        <notebook>
+                            <page string="Spaceship">
+                                <group>
+                                    <field name="ship"/>
+                                    <field name="type"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>            
+        </record>
+               
+        <record model="ir.ui.view" id="mission_view_list">
+            <field name="name">space.mission.list</field>
+            <field name="model">space.mission</field>
+            <field name="arch" type="xml">
+                <tree string="Mission List">
+                    <field name="name"/>
+                </tree>
+            </field> 
+        </record>
+        
+        
+    </data>
+</odoo>

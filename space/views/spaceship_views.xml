@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="spaceship_view_form">
+            <field name="name">space.spaceship.form</field>
+            <field name="model">space.spaceship</field>
+            <field name="arch" type="xml">
+                <form string="Spaceship Form">
+                    <header>
+                        <button string="Create mission (object)" type="object" name="open_wizard"/>
+                        <button string="Create mission (action)" type="action" name="%(space_mission_wizard_action)d"/>
+                    </header>
+                    <sheet>
+                        <h1><field name="name"/></h1>
+                        <group>
+                            <group>                                
+                                <field name="active"/>
+                            </group>
+                            <group>
+                                <field name="passenger"/>                               
+                            </group>
+                        </group> 
+                        <notebook>
+                            <page string="Description">
+                                <group>
+                                    <field name="type"/>
+                                    <field name="fuel"/>
+                                </group>
+                            </page>
+                            <page string="Missions">
+                                <field name="mission_ids"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>            
+        </record>
+        
+        <record model="ir.ui.view" id="spaceship_view_list">
+            <field name="name">space.spaceship.list</field>
+            <field name="model">space.spaceship</field>
+            <field name="arch" type="xml">
+                <tree string="Spaceship List">
+                    <field name="name"/>
+                    <field name="fuel"/>
+                    <field name="type"/>
+                    <field name="passenger"/>
+                </tree>
+            </field> 
+        </record>
+        
+        <record model="ir.ui.view" id="spaceship_view_search">
+            <field name="name">space.spaceship.search</field>
+            <field name="model">space.spaceship</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="type"/>
+                </search>
+            </field>     
+        </record>       
+    </data>
+</odoo>

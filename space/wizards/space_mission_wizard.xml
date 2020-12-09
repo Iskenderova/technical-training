@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="space_mission_wizard_form">
+            <field name="name">space.mission.wizard.form</field>
+            <field name="model">space.mission.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="spaceship_ids" readonly="1"/>
+                        <field name="mission_name"/>
+                    </group>
+                    <footer>
+                        <button name="create_mission" type="object" string="Create" class="oe_highlight"/>
+                        or
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>            
+        </record>
+        
+        <record id="space_mission_wizard_action" model="ir.actions.act_window">
+            <field name="name">Space mission wizard</field>
+            <field name="res_model">space.mission.wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        
+    </data>
+</odoo>
