@@ -35,7 +35,6 @@
                 </form>
             </field>            
         </record>
-        
         <record model="ir.ui.view" id="spaceship_view_list">
             <field name="name">space.spaceship.list</field>
             <field name="model">space.spaceship</field>

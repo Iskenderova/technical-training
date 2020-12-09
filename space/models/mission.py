@@ -27,7 +27,7 @@ class Mission(models.Model):
                               store=True)
     
     duration = fields.Integer(string='Mission Days',
-                              dafault=1)
+                              default=1)
     captain = fields.Many2one('res.users', string="Captain")
     
 #    fuel_needed = fields.Integer(string='Amount of fuel needed', store=True)

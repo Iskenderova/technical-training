@@ -6,4 +6,5 @@ class SpaceProjectWizard(models.TransientModel):
     _name = 'space.project.task.wizard'
     _description = 'space project task wizard'
     
-
+    def create_project_task(self):
+        pass
